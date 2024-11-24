@@ -9,6 +9,14 @@ Secret Paisano is a Python-based application that automates the process of sendi
 - **Custom Templates**: Uses a Jinja2 HTML template for email customization.
 - **Backup**: Creates a backup of the participants and their pairings.
 
+## Instalation
+
+I used uv to create/use this app to use it you can simply run these commands:
+```bash
+
+uv sync
+uv run main.py
+```
 ## Requirements
 
 - Python 3.7+
@@ -18,17 +26,6 @@ Secret Paisano is a Python-based application that automates the process of sendi
 - Pydantic
 - pydantic-settings
 - smtplib
-
-## Instalation
-
-I used uv to create/use this app to use it you can simply run these commands:
-```bash
-
-uv sync
-uv run main.py
-```
-
-## Needs
 
 To execute this command you need to put your environment variables and have a csv file with your friends data.
 ```csv
