@@ -18,3 +18,20 @@ Secret Paisano is a Python-based application that automates the process of sendi
 - Pydantic
 - pydantic-settings
 - smtplib
+
+## Instalation
+
+I used uv to create/use this app to use it you can simply run these commands:
+```bash
+
+uv sync
+uv run main.py
+```
+
+## Needs
+
+To execute this command you need to put your environment variables and have a csv file with your friends data.
+```csv
+name,email,tshirt_size,colors,to_know,alergic
+Paisano,paisano@gmail.com,L,#FFFFFF,"I love you so much guys",
+```
