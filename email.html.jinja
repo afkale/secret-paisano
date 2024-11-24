@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: Roboto; max-width: 600px; padding: 20px; margin: auto;">
+  <h3 style="font-weight: lighter;">Hola, <strong>{{ couple.gifter.name }}</strong>! tu paisano invisible es:</h3>
+
+  <div style="padding: 20px; margin-bottom: 20px; background-color: #ece8d9;">
+    <figure style="width: 100%; max-width: 502px; margin: 0 auto;">
+      <img src="{{ random_image_url }}" style="max-width: 100%; border: 1px solid rgba(0, 0, 0, .5);">
+    </figure>
+
+    <h1 style="text-align: center; font-size: 40px; margin-bottom: 8px;">{{ couple.gifted.name }}</h1>
+    <table width="100%" style="text-align: center;">
+      <tr>
+        <td style="padding: 8px;">
+          <h4>Lo que tu paisano invisible quiere que sepas sobre el:</h4>
+          <p>{{ couple.gifted.to_know }}.</p>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;">
+          <h4>Su taya de camiseta es:</h4>
+          <span style="display: inline-block; text-align: center; border: 1px solid #ccc; background-color: #ccc; border-radius: 5px; padding: 4px;">{{ couple.gifted.tshirt_size }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 8px;">
+          <h4>Sus colores favoritos son:</h4>
+          <table style="margin: 0 auto;">
+            <tr>
+              {% for color in couple.gifted.colors %}
+              <td style="background-color: {{ color }}; height: 40px; width: 40px;"></td>
+              {% endfor %}
+            </tr>
+          </table>
+        </td>
+      </tr>
+      {% if couple.gifted.alergic %}
+      <tr>
+        <td style="padding: 4px;">
+					<table style="margin: 0 auto; text-align: center;">
+						<tr><h4>Tu paisano invisible es alergico a:<h4><tr/>
+						<tr>{{ couple.gifted.alergic }}</tr>
+					</table>
+        </td>
+      </tr>
+      {% endif %}
+    </table>
+  </div>
+</body>
+</html>
+

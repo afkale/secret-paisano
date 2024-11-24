@@ -1,0 +1,15 @@
+[project]
+name = "secret-paisano"
+version = "0.1.0"
+description = "A simple secret santa app for my friends 'Los paisanos'."
+readme = "README.md"
+requires-python = "==3.12.7"
+dependencies = [
+    "jinja2==3.1.4",
+    "pandas==2.2.3",
+    "pydantic-settings==2.6.1",
+    "pydantic==2.10.1",
+]
+[tool.ruff]
+lint.extend-select = ["I"]
+
